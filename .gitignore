@@ -1,0 +1,5 @@
+*.pyc
+.tox/
+__pycache__
+django_env.egg-info/
+venv/
