@@ -24,10 +24,12 @@ class Config:
         return self._values
 
     def __call__(self, key, default=required, cast=str):
-        value = self.values.get(key, default)
+        value = os.getenv(key)
+        if value is None:
+            value = self.values.get(key, default)
+
         if value is required:
-            keys = ', '.join(self.values.keys())
-            raise EnvironmentError(f'{key} is required, {keys}')
+            raise EnvironmentError(f'{key} is required')
 
         return None if value is None else self.castings.get(cast, cast)(value)
 
