@@ -11,8 +11,8 @@ setup(
     zip_safe=False,
     py_modules=['django-castenv'],
     install_requires=[
-        'python-dotenv[cli]==0.10.3',
-        'dj-email-url==0.2.0',
+        'python-dotenv[cli]==0.15.0',
+        'dj-email-url==1.0.2',
         'dj-database-url==0.5.0',
     ]
 )
