@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='django-castenv',
-    version='0.2.0',
+    version='0.3.0',
     description='Simple Django specific wrapper for dotenv, with casting',
     url='http://github.com/dakrauth/django-castenv',
     author='David Krauth',
